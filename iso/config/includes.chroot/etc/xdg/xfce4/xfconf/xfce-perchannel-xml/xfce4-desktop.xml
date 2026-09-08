@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  xfce4-desktop.xml — system-wide default, read from /etc/xdg via
+  XDG_CONFIG_DIRS and copied into a new user's ~/.config on first login
+  (only if they have no config of their own yet).
+
+  CAVEAT: xfconf's per-monitor/per-workspace property paths (e.g.
+  /backdrop/screen0/monitorVGA-1/workspace0/last-image) depend on the
+  actual monitor name XFCE detects, which varies by hardware/VM. This
+  file covers the common "monitor0" case as a best-effort default; the
+  per-user branding/set-theme.sh script (Milestone 4) is the reliable
+  way to (re)apply the wallpaper after first login regardless of the
+  detected monitor name.
+-->
+<channel name="xfce4-desktop" version="1.0">
+  <property name="backdrop" type="empty">
+    <property name="screen0" type="empty">
+      <property name="monitor0" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/usr/share/backgrounds/shengos/shengos-default.png"/>
+          <property name="image-style" type="int" value="5"/>
+        </property>
+      </property>
+    </property>
+  </property>
+</channel>

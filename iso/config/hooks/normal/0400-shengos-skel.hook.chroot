@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# 0400-shengos-skel.hook.chroot — make every new user start with sheng-sh.
+set -euo pipefail
+
+SKEL_SHENGOS="/etc/skel/.shengos"
+SKEL_BASHRC="/etc/skel/.bashrc"
+HOOK_LINE='source "$HOME/.shengos/.shengrc"'
+
+if [ ! -d "$SKEL_SHENGOS" ]; then
+    echo "[shengos] ONYO: $SKEL_SHENGOS haipo — Milestone 1 haijawekwa kwenye includes.chroot."
+    exit 0
+fi
+
+chmod 644 "$SKEL_SHENGOS"/*.sh "$SKEL_SHENGOS"/.shengrc "$SKEL_SHENGOS"/*.json 2>/dev/null || true
+
+if [ -f "$SKEL_BASHRC" ] && ! grep -qF "$HOOK_LINE" "$SKEL_BASHRC"; then
+    {
+        echo ""
+        echo "# ShengOS native Swahili/Sheng shell"
+        echo "$HOOK_LINE"
+    } >> "$SKEL_BASHRC"
+elif [ ! -f "$SKEL_BASHRC" ]; then
+    {
+        echo "# ShengOS native Swahili/Sheng shell"
+        echo "$HOOK_LINE"
+    } > "$SKEL_BASHRC"
+fi
+
+echo "[shengos] .shengrc imeunganishwa kwenye /etc/skel — watumiaji wapya watapata sheng-sh moja kwa moja."

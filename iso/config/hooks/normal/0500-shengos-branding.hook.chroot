@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# 0500-shengos-branding.hook.chroot — wallpaper rasterization + GRUB strings.
+#
+# NOTE: this ISO is built with --debian-installer none (live-boot only,
+# see build.sh). Editing /etc/default/grub here matters only if a future
+# milestone adds an installer that copies the chroot to a real disk and
+# runs update-grub there — for the live squashfs itself, live-build's own
+# binary/ hooks own the boot menu. We still set it for forward-compat.
+set -euo pipefail
+
+BG_DIR="/usr/share/backgrounds/shengos"
+SVG_SRC="$BG_DIR/shengos-default.svg"
+PNG_OUT="$BG_DIR/shengos-default.png"
+
+if [ -f "$SVG_SRC" ]; then
+    if command -v rsvg-convert >/dev/null 2>&1; then
+        rsvg-convert -w 1920 -h 1080 "$SVG_SRC" -o "$PNG_OUT"
+        echo "[shengos] Wallpaper imetengenezwa: $PNG_OUT"
+    else
+        echo "[shengos] ONYO: rsvg-convert haipo (angalia package-lists/shengos.list.chroot) — wallpaper itabaki SVG."
+    fi
+else
+    echo "[shengos] ONYO: $SVG_SRC haipo — Milestone 4 haijawekwa kwenye includes.chroot."
+fi
+
+GRUB_DEFAULT_FILE="/etc/default/grub"
+if [ -f "$GRUB_DEFAULT_FILE" ]; then
+    set_grub_var() {
+        local key="$1" value="$2"
+        if grep -q "^${key}=" "$GRUB_DEFAULT_FILE"; then
+            sed -i "s|^${key}=.*|${key}=\"${value}\"|" "$GRUB_DEFAULT_FILE"
+        elif grep -q "^#${key}=" "$GRUB_DEFAULT_FILE"; then
+            sed -i "s|^#${key}=.*|${key}=\"${value}\"|" "$GRUB_DEFAULT_FILE"
+        else
+            echo "${key}=\"${value}\"" >> "$GRUB_DEFAULT_FILE"
+        fi
+    }
+    set_grub_var "GRUB_DISTRIBUTOR" "ShengOS"
+    set_grub_var "GRUB_TIMEOUT" "5"
+    echo "[shengos] GRUB_DISTRIBUTOR imewekwa kuwa ShengOS."
+else
+    echo "[shengos] $GRUB_DEFAULT_FILE haipo kwenye chroot hii — imerukwa (kawaida kwa picha ya live pekee)."
+fi

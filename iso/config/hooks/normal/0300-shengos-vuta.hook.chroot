@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# 0300-shengos-vuta.hook.chroot — wire up the vuta package-manager wrapper.
+set -euo pipefail
+
+BIN_DIR="/usr/local/bin"
+TARGET="$BIN_DIR/vuta"
+
+if [ ! -f "$TARGET" ]; then
+    echo "[shengos] ONYO: $TARGET haipo — Milestone 2 haijawekwa kwenye includes.chroot."
+    exit 0
+fi
+
+chmod 755 "$TARGET"
+
+for alias in sakinisha toa ondoa update upya tafuta orodha usaidizi; do
+    ln -sf "$TARGET" "$BIN_DIR/$alias"
+done
+
+echo "[shengos] vuta na amri zake zimewekwa: sakinisha, toa, ondoa, update, upya, tafuta, orodha, usaidizi"

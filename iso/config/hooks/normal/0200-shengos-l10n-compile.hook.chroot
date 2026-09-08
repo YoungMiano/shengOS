@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# 0200-shengos-l10n-compile.hook.chroot — compile gettext catalogs.
+# Assumes the build.sh staging step has already copied po/sw_KE/*.po to
+# /usr/share/shengos/l10n/po/sw_KE/ inside config/includes.chroot.
+set -euo pipefail
+
+PO_DIR="/usr/share/shengos/l10n/po/sw_KE"
+LOCALE_ROOT="/usr/share/locale/sw_KE/LC_MESSAGES"
+
+if [ ! -d "$PO_DIR" ]; then
+    echo "[shengos] ONYO: $PO_DIR haipo — hakuna tafsiri za kukusanya."
+    exit 0
+fi
+
+mkdir -p "$LOCALE_ROOT"
+
+for po_file in "$PO_DIR"/*.po; do
+    [ -e "$po_file" ] || continue
+    domain="$(basename "$po_file" .po)"
+    msgfmt -c -o "$LOCALE_ROOT/$domain.mo" "$po_file"
+    echo "[shengos] Imekusanywa: $domain.po -> $LOCALE_ROOT/$domain.mo"
+done

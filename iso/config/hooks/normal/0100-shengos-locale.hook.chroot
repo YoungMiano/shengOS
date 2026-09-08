@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# 0100-shengos-locale.hook.chroot — runs inside the live-build chroot.
+# Same logic as l10n/locale-setup.sh, but non-interactive (already root,
+# no login-session assumptions) since this executes during image build.
+set -euo pipefail
+
+LOCALE_GEN="/etc/locale.gen"
+LOCALE_CONF="/etc/default/locale"
+ENV_FILE="/etc/environment"
+
+for entry in "sw_KE.UTF-8 UTF-8" "en_US.UTF-8 UTF-8"; do
+    if grep -qE "^#?\s*${entry}" "$LOCALE_GEN" 2>/dev/null; then
+        sed -i "s/^#\s*${entry}/${entry}/" "$LOCALE_GEN"
+    else
+        echo "$entry" >> "$LOCALE_GEN"
+    fi
+done
+
+locale-gen
+
+{
+    echo "LANG=sw_KE.UTF-8"
+    echo "LC_ALL=sw_KE.UTF-8"
+    echo "LANGUAGE=sw_KE:en_US.UTF-8"
+} > "$LOCALE_CONF"
+
+if ! grep -q '^LANGUAGE=' "$ENV_FILE" 2>/dev/null; then
+    echo 'LANGUAGE=sw_KE:en_US.UTF-8' >> "$ENV_FILE"
+fi
+
+echo "[shengos] sw_KE.UTF-8 imewekwa kama lugha chaguomsingi (na English kama akiba)."

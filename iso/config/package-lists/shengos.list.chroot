@@ -1,0 +1,22 @@
+# shengos.list.chroot — packages installed into the live filesystem
+# Milestone 5: Live-Build ISO Pipeline Configuration
+
+# Desktop environment
+task-xfce-desktop
+xfce4
+xfce4-terminal
+thunar
+lightdm
+lightdm-gtk-greeter
+
+# ShengOS tooling dependencies
+gettext
+librsvg2-bin
+python3
+git
+locales
+
+# Base utilities we alias/wrap in Milestone 1 & 2
+apt-utils
+sudo
+bash-completion
