@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "project": "ShengOS / SwahiliOS",
+    "milestone": 1,
+    "description": "Canonical mapping of GNU coreutils / shell commands to Sheng and Swahili equivalents. Used to generate .shengrc aliases and (later) vuta/apt wrapper vocabulary and po/mo catalogs."
+  },
+  "commands": [
+    { "original": "ls",      "sheng": "cheki",   "swahili": "orodha",    "desc_sw": "Orodhesha faili na saraka" },
+    { "original": "cd",      "sheng": "vuka",    "swahili": "sogea",     "desc_sw": "Badilisha saraka" },
+    { "original": "mkdir",   "sheng": "unda",    "swahili": "tengeneza", "desc_sw": "Tengeneza saraka mpya" },
+    { "original": "rm",      "sheng": "dema",    "swahili": "futa",      "desc_sw": "Futa faili au saraka" },
+    { "original": "sudo",    "sheng": "boss",    "swahili": "mkuu",      "desc_sw": "Endesha amri kama msimamizi" },
+    { "original": "clear",   "sheng": "safi",    "swahili": "safisha",   "desc_sw": "Safisha skrini ya terminal" },
+    { "original": "cat",     "sheng": "soma",    "swahili": "soma",      "desc_sw": "Soma maudhui ya faili" },
+    { "original": "grep",    "sheng": "tafuta",  "swahili": "tafuta",    "desc_sw": "Tafuta maneno ndani ya faili" },
+    { "original": "pwd",     "sheng": "wapi",    "swahili": "niko_wapi", "desc_sw": "Onyesha saraka ya sasa" },
+    { "original": "cp",      "sheng": "nakili",  "swahili": "nakili",    "desc_sw": "Nakili faili au saraka" },
+    { "original": "mv",      "sheng": "hamisha", "swahili": "hamisha",   "desc_sw": "Hamisha au badilisha jina la faili" },
+    { "original": "touch",   "sheng": "gusa",    "swahili": "gusa",      "desc_sw": "Tengeneza faili tupu" },
+    { "original": "man",     "sheng": "saidia",  "swahili": "mwongozo",  "desc_sw": "Onyesha mwongozo wa amri" },
+    { "original": "history", "sheng": "historia","swahili": "historia",  "desc_sw": "Onyesha historia ya amri" },
+    { "original": "whoami",  "sheng": "mimi_ni", "swahili": "mimi_ni",   "desc_sw": "Onyesha jina la mtumiaji" },
+    { "original": "ps",      "sheng": "mchakato","swahili": "mchakato",  "desc_sw": "Onyesha michakato inayoendesha" },
+    { "original": "kill",    "sheng": "ua",      "swahili": "ua",        "desc_sw": "Simamisha mchakato" },
+    { "original": "df",      "sheng": "nafasi",  "swahili": "nafasi",    "desc_sw": "Onyesha nafasi ya diski" },
+    { "original": "du",      "sheng": "ukubwa",  "swahili": "ukubwa",    "desc_sw": "Onyesha ukubwa wa faili/saraka" },
+    { "original": "exit",    "sheng": "toka",    "swahili": "toka",      "desc_sw": "Toka kwenye terminal" },
+    { "original": "less",    "sheng": "pekuwa",  "swahili": "vinjari",   "desc_sw": "Vinjari faili kurasa kwa kurasa" },
+    { "original": "find",    "sheng": "tafuta_faili", "swahili": "tafuta_faili", "desc_sw": "Tafuta faili kwenye mfumo" },
+    { "original": "chmod",   "sheng": "ruhusu",  "swahili": "ruhusu",    "desc_sw": "Badilisha ruhusa za faili" },
+    { "original": "chown",   "sheng": "mmiliki", "swahili": "mmiliki",   "desc_sw": "Badilisha mmiliki wa faili" },
+    { "original": "top",     "sheng": "juu",     "swahili": "hali_mfumo","desc_sw": "Onyesha hali ya mfumo kwa wakati halisi" },
+    { "original": "echo",    "sheng": "sema",    "swahili": "sema",      "desc_sw": "Chapisha maandishi" },
+    { "original": "date",    "sheng": "tarehe",  "swahili": "tarehe",    "desc_sw": "Onyesha tarehe na saa" },
+    { "original": "hostname","sheng": "jina_mfumo","swahili": "jina_mfumo","desc_sw": "Onyesha jina la mfumo" }
+  ]
+}

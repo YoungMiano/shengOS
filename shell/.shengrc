@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+# .shengrc — ShengOS native Swahili/Sheng shell environment
+# Milestone 1: CLI & Native Command Mapping Engine
+#
+# Source this from ~/.bashrc:
+#   source ~/.shengos/.shengrc
+
+export SHENGOS_HOME="${SHENGOS_HOME:-$HOME/.shengos}"
+
+# ---- load the wrapped/native functions (cd, mkdir, rm, sudo, etc.) --------
+if [ -f "$SHENGOS_HOME/helpers.sh" ]; then
+    source "$SHENGOS_HOME/helpers.sh"
+fi
+
+# ---- simple 1:1 aliases (no custom error handling needed) -----------------
+alias wapi='pwd'
+alias niko_wapi='pwd'
+alias nakili='cp -r'
+alias hamisha='mv'
+alias gusa='touch'
+alias saidia='man'
+alias mwongozo='man'
+alias historia='history'
+alias mimi_ni='whoami'
+alias mchakato='ps aux'
+alias ua='kill'
+alias nafasi='df -h'
+alias ukubwa='du -sh'
+alias toka='exit'
+alias pekuwa='less'
+alias vinjari='less'
+alias tafuta_faili='find'
+alias ruhusu='chmod'
+alias mmiliki='chown'
+alias juu='top'
+alias hali_mfumo='top'
+alias sema='echo'
+alias tarehe='date'
+alias jina_mfumo='hostname'
+
+# ---- Swahili-formatted prompt -----------------------------------------
+# format: mtumiaji@mfumo saraka $
+_shengos_prompt() {
+    local dir="${PWD/#$HOME/~}"
+    PS1="\[\033[1;32m\]\u@\h\[\033[0m\]:\[\033[1;34m\]${dir}\[\033[0m\] \$ "
+}
+PROMPT_COMMAND="_shengos_prompt${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
+
+# ---- welcome banner (shown once per interactive shell) ---------------
+if [[ $- == *i* ]]; then
+    echo -e "\033[1;36mKaribu ShengOS!\033[0m Andika \033[1;33musaidizi\033[0m kuona amri zote."
+fi
