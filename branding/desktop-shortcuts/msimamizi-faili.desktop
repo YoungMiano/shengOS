@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Msimamizi wa Faili
+Name[sw]=Msimamizi wa Faili
+Comment=Vinjari na simamia faili zako
+Comment[sw]=Vinjari na simamia faili zako
+Exec=thunar %F
+Icon=system-file-manager
+Terminal=false
+Categories=System;FileManager;

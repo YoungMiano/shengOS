@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Terminali
+Name[sw]=Terminali
+Comment=Fungua terminali ya ShengOS (sheng-sh)
+Comment[sw]=Fungua terminali ya ShengOS (sheng-sh)
+Exec=xfce4-terminal
+Icon=utilities-terminal
+Terminal=false
+Categories=System;TerminalEmulator;

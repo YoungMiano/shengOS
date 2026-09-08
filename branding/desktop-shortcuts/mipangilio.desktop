@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Mipangilio ya Mfumo
+Name[sw]=Mipangilio ya Mfumo
+Comment=Badilisha mipangilio ya ShengOS
+Comment[sw]=Badilisha mipangilio ya ShengOS
+Exec=xfce4-settings-manager
+Icon=preferences-system
+Terminal=false
+Categories=Settings;
