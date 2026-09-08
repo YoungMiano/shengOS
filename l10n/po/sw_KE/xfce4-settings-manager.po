@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ShengOS l10n 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-01 00:00+0300\n"
+"PO-Revision-Date: 2026-01-01 00:00+0300\n"
+"Last-Translator: ShengOS Localization Team\n"
+"Language-Team: Swahili (Kenya) <sw_KE@shengos.local>\n"
+"Language: sw_KE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Settings Manager"
+msgstr "Msimamizi wa Mipangilio"
+
+msgid "Appearance"
+msgstr "Muonekano"
+
+msgid "Desktop"
+msgstr "Dawati"
+
+msgid "Display"
+msgstr "Skrini"
+
+msgid "Keyboard"
+msgstr "Kibodi"
+
+msgid "Mouse and Touchpad"
+msgstr "Kipanya na Uso wa Kugusa"
+
+msgid "Network"
+msgstr "Mtandao"
+
+msgid "Power Manager"
+msgstr "Msimamizi wa Nishati"
+
+msgid "Sound"
+msgstr "Sauti"
+
+msgid "Users and Groups"
+msgstr "Watumiaji na Vikundi"
+
+msgid "Date and Time"
+msgstr "Tarehe na Saa"
+
+msgid "Language Support"
+msgstr "Msaada wa Lugha"
+
+msgid "Notifications"
+msgstr "Arifa"
+
+msgid "Window Manager"
+msgstr "Msimamizi wa Madirisha"
+
+msgid "Search settings..."
+msgstr "Tafuta mipangilio..."
+
+msgid "Apply"
+msgstr "Tumia"
+
+msgid "Cancel"
+msgstr "Ghairi"
+
+msgid "Reset to Defaults"
+msgstr "Rejesha Mipangilio ya Asili"
+
+msgid "Changes will take effect after you log out."
+msgstr "Mabadiliko yataanza kutumika baada ya kutoka."
+
+msgid "Brightness"
+msgstr "Mwangaza"
+
+msgid "Volume"
+msgstr "Kiwango cha Sauti"
+
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+msgid "Battery"
+msgstr "Betri"
+
+msgid "Connected"
+msgstr "Imeunganishwa"
+
+msgid "Disconnected"
+msgstr "Haijaunganishwa"

@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ShengOS l10n 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-01 00:00+0300\n"
+"PO-Revision-Date: 2026-01-01 00:00+0300\n"
+"Last-Translator: ShengOS Localization Team\n"
+"Language-Team: Swahili (Kenya) <sw_KE@shengos.local>\n"
+"Language: sw_KE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "File Manager"
+msgstr "Msimamizi wa Faili"
+
+msgid "Home"
+msgstr "Mwanzo"
+
+msgid "Desktop"
+msgstr "Dawati"
+
+msgid "Documents"
+msgstr "Nyaraka"
+
+msgid "Downloads"
+msgstr "Vilivyopakuliwa"
+
+msgid "Pictures"
+msgstr "Picha"
+
+msgid "Music"
+msgstr "Muziki"
+
+msgid "Videos"
+msgstr "Video"
+
+msgid "Trash"
+msgstr "Pipa la Taka"
+
+msgid "New Folder"
+msgstr "Saraka Mpya"
+
+msgid "New File"
+msgstr "Faili Jipya"
+
+msgid "Rename"
+msgstr "Badilisha Jina"
+
+msgid "Delete"
+msgstr "Futa"
+
+msgid "Copy"
+msgstr "Nakili"
+
+msgid "Cut"
+msgstr "Kata"
+
+msgid "Paste"
+msgstr "Bandika"
+
+msgid "Properties"
+msgstr "Sifa"
+
+msgid "Open"
+msgstr "Fungua"
+
+msgid "Open With..."
+msgstr "Fungua Kwa..."
+
+msgid "Are you sure you want to permanently delete \"%s\"?"
+msgstr "Una uhakika unataka kufuta \"%s\" kabisa?"
+
+msgid "This folder is empty."
+msgstr "Saraka hii haina kitu."
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "kipengele %d"
+msgstr[1] "vipengele %d"
+
+msgid "Search this folder"
+msgstr "Tafuta ndani ya saraka hii"
+
+msgid "Permission denied."
+msgstr "Ruhusa imekataliwa."
+
+msgid "Free space: %s"
+msgstr "Nafasi iliyobaki: %s"

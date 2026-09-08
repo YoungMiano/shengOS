@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ShengOS l10n 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-01 00:00+0300\n"
+"PO-Revision-Date: 2026-01-01 00:00+0300\n"
+"Last-Translator: ShengOS Localization Team\n"
+"Language-Team: Swahili (Kenya) <sw_KE@shengos.local>\n"
+"Language: sw_KE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Terminal"
+msgstr "Terminali"
+
+msgid "New Tab"
+msgstr "Kichupo Kipya"
+
+msgid "New Window"
+msgstr "Dirisha Jipya"
+
+msgid "Close Tab"
+msgstr "Funga Kichupo"
+
+msgid "Close Window"
+msgstr "Funga Dirisha"
+
+msgid "Copy"
+msgstr "Nakili"
+
+msgid "Paste"
+msgstr "Bandika"
+
+msgid "Preferences"
+msgstr "Mapendeleo"
+
+msgid "Find..."
+msgstr "Tafuta..."
+
+msgid "Zoom In"
+msgstr "Kuza"
+
+msgid "Zoom Out"
+msgstr "Punguza"
+
+msgid "Reset Zoom"
+msgstr "Rejesha Ukubwa wa Asili"
+
+msgid "There is still a process running in this tab. Closing the tab will kill it."
+msgstr "Bado kuna mchakato unaoendelea kwenye kichupo hiki. Kufunga kichupo kutaua mchakato huo."
+
+msgid "Close all tabs?"
+msgstr "Funga vichupo vyote?"
+
+msgid "This window has %d tab open."
+msgid_plural "This window has %d tabs open."
+msgstr[0] "Dirisha hili lina kichupo %d kikiwa wazi."
+msgstr[1] "Dirisha hili lina vichupo %d vikiwa wazi."
+
+msgid "Set Title..."
+msgstr "Weka Kichwa cha Habari..."
+
+msgid "Fullscreen"
+msgstr "Skrini Nzima"
+
+msgid "Read-Only"
+msgstr "Kusoma Tu"
